@@ -1,6 +1,8 @@
 # ir2mqtt
 ir to mqtt firmware for the generic-bk7231n-qfn32-tuya to allow it to pass ir remote input and output directly to home assistant
 
+this firmware lets you use them with home assistant (the self hosted smart home controller) and allows you to control IR stuff, but also use old IR remotes to control your smart home crap, which isn't something most of these things support 
+
 Prerequisites & Tools
 
     Hardware:
