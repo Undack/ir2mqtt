@@ -1,6 +1,10 @@
 # ir2mqtt
 ir to mqtt firmware for the generic-bk7231n-qfn32-tuya to allow it to pass ir remote input and output directly to home assistant
 
+it is designed to be used with cheap tuya ir devices such as the following
+https://www.aliexpress.com/item/1005007335703208.html?spm=a2g0o.productlist.main.17.1cb1jicgjicgar&algo_pvid=cfe127f9-f796-4d04-8767-1ff65614c814&algo_exp_id=cfe127f9-f796-4d04-8767-1ff65614c814-8&pdp_ext_f=%7B%22order%22%3A%22797%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21GBP%216.92%213.18%21%21%2161.67%2128.37%21%40211b629217403230884477924eaae3%2112000040313459127%21sea%21UK%216065768981%21X&curPageLogUid=HlkDNUhrevUK&utparam-url=scene%3Asearch%7Cquery_from%3A
+https://www.aliexpress.com/item/1005008188667566.html?spm=a2g0o.productlist.main.33.1cb1jicgjicgar&algo_pvid=cfe127f9-f796-4d04-8767-1ff65614c814&algo_exp_id=cfe127f9-f796-4d04-8767-1ff65614c814-16&pdp_ext_f=%7B%22order%22%3A%2219%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21GBP%218.08%214.93%21%21%219.93%216.06%21%40211b629217403230884477924eaae3%2112000044172442642%21sea%21UK%216065768981%21X&curPageLogUid=KzWr64rAd9H7&utparam-url=scene%3Asearch%7Cquery_from%3A
+
 this firmware lets you use them with home assistant (the self hosted smart home controller) and allows you to control IR stuff, but also use old IR remotes to control your smart home crap, which isn't something most of these things support 
 
 Prerequisites & Tools
