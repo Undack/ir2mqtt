@@ -9,6 +9,7 @@ Prerequisites & Tools
         A USB-to-UART adapter (if needed for kickstart flashing)
     Software:
         Tuya CloudCutter (see digiblurDIY’s guide)
+        https://digiblur.com/2023/08/19/updated-tuya-cloudcutter-with-esphome-bk7231-how-to-guide/
         LT Chip Tool (for reading/adjusting device configuration)
         ESPHome (v10.yml firmware to be compiled and flashed)
         Home Assistant (for device integration)
