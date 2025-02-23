@@ -78,7 +78,7 @@ cards:
     show_icon: true
     tap_action:
 
-Notes:
+https://pictogrammers.com/library/mdi/
+a library for icons for UI cards
 
-    Replace $devicename with your device’s MQTT topic or name as configured in your ESPHome YAML.
-    Visit Pictogrammers MDI Library to choose and verify icons.
+Be sure to edit the name in substitutions:, globals:, esphome:, the name must be unique for each ir remote, also be sure to set mqtt_username, mqtt_password, and mqtt_broker ip address in your secrets.yaml 
