@@ -49,17 +49,18 @@ This firmware is compatible with budget-friendly Tuya IR blasters like:
 
 1. Create a **new ESPHome device** in Home Assistant.
 2. Place the `v10.yml` file in the ESPHome configuration.
-3. Edit `secrets.yaml`:
+3. Each IR remote must have a unique name (substitutions, globals, esphome fields in v10.yml).
+4. Edit `secrets.yaml`:
    ```yaml
    mqtt_broker: "your_broker_ip"
    mqtt_username: "your_username"
    mqtt_password: "your_password"
    ```
-4. Compile and download the firmware:
+5. Compile and download the firmware:
    ```sh
    esphome run v10.yml
    ```
-5. Access the **kickstart firmware’s web interface** and upload the compiled **HEX file**.
+6. Access the **kickstart firmware’s web interface** and upload the compiled **HEX file**.
 
 ## Step 3: Configure Home Assistant
 
@@ -96,7 +97,6 @@ cards:
 
 ## Notes & Tips
 
-- Each IR remote **must have a unique name** (`substitutions`, `globals`, `esphome` fields in `v10.yml`).
 - Ensure correct **MQTT credentials** are set in `secrets.yaml`.
 - The **kickstart firmware** will NOT brick the device if the process fails—it can be retried.
 
