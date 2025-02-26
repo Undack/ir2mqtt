@@ -1,86 +1,117 @@
-# ir2mqtt
-ir to mqtt firmware for the generic-bk7231n-qfn32-tuya to allow it to pass ir remote input and output directly to home assistant
+IR2MQTT: IR to MQTT Firmware for Tuya BK7231N Devices
 
-it is designed to be used with cheap tuya ir devices such as the following
+Overview
 
-https://www.aliexpress.com/item/1005007335703208.html?spm=a2g0o.productlist.main.17.1cb1jicgjicgar&algo_pvid=cfe127f9-f796-4d04-8767-1ff65614c814&algo_exp_id=cfe127f9-f796-4d04-8767-1ff65614c814-8&pdp_ext_f=%7B%22order%22%3A%22797%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21GBP%216.92%213.18%21%21%2161.67%2128.37%21%40211b629217403230884477924eaae3%2112000040313459127%21sea%21UK%216065768981%21X&curPageLogUid=HlkDNUhrevUK&utparam-url=scene%3Asearch%7Cquery_from%3A
+IR2MQTT is a custom firmware for the generic BK7231N-QFN32 Tuya IR devices, enabling direct IR input and output communication with Home Assistant via MQTT. This allows you to control IR appliances and use existing IR remotes to interact with smart home devices—functionality that most Tuya IR hubs lack.
 
-https://www.aliexpress.com/item/1005008188667566.html?spm=a2g0o.productlist.main.33.1cb1jicgjicgar&algo_pvid=cfe127f9-f796-4d04-8767-1ff65614c814&algo_exp_id=cfe127f9-f796-4d04-8767-1ff65614c814-16&pdp_ext_f=%7B%22order%22%3A%2219%22%2C%22eval%22%3A%221%22%7D&pdp_npi=4%40dis%21GBP%218.08%214.93%21%21%219.93%216.06%21%40211b629217403230884477924eaae3%2112000044172442642%21sea%21UK%216065768981%21X&curPageLogUid=KzWr64rAd9H7&utparam-url=scene%3Asearch%7Cquery_from%3A
+Supported Devices
 
-this firmware lets you use them with home assistant (the self hosted smart home controller) and allows you to control IR stuff, but also use old IR remotes to control your smart home crap, which isn't something most of these things support 
+This firmware is compatible with budget-friendly Tuya IR blasters like:
+
+Device 1
+
+Device 2
 
 Prerequisites & Tools
 
-    Hardware:
-        A Tuya IR device with a BK7321N chipset
-        A computer or Raspberry Pi for running the Tuya CloudCutter exploit
-        A USB-to-UART adapter (if needed for kickstart flashing)
-    Software:
-        Tuya CloudCutter (see digiblurDIY’s guide)
-        https://digiblur.com/2023/08/19/updated-tuya-cloudcutter-with-esphome-bk7231-how-to-guide/
+Hardware:
 
-        ESPHome (v10.yml firmware to be compiled and flashed)
-        Home Assistant (for device integration)
+Tuya IR device with a BK7231N chipset
 
-Step 1: Preparing Your Device & Installing Kickstart Firmware
+A computer or Raspberry Pi (to run Tuya CloudCutter)
 
-    Run Tuya CloudCutter:
-    Use your Raspberry Pi or Linux computer to run Tuya CloudCutter. This tool will exploit the device over the air without any soldering.
-        Follow the on-screen instructions until you reach the firmware flash options.
-    Select the Correct Kickstart Firmware:
-    When prompted, choose the kickstart firmware installers for the BK7321N. Important:
-        Use the v2.0.0 installer that is the second one down in the group.
-        Note that if you try any other installer, the process will simply fail (without bricking the device), so double-check before proceeding.
-    Flash the Kickstart Firmware:
-    Complete the flashing process. Once successful, your device will boot into a temporary “Kickstart” mode (typically broadcasting its own access point). Connect to this access point, then proceed with your network setup as guided.
+A USB-to-UART adapter (if needed for kickstart flashing)
 
-Step 2: Flashing the v10.yml ESPHome Firmware
+Software:
 
-    Prepare Your ESPHome Configuration:
-    Download or open your v10.yml file—the custom configuration designed for your IR device. Make sure it contains the appropriate settings for your device’s hardware (GPIOs for IR transmission/reception, relays, sensors, etc.).
+Tuya CloudCutter (for unlocking the device)
 
-    Compile the Firmware:
-    Use the ESPHome dashboard or command-line tool to compile the firmware:
+ESPHome (to compile and flash the firmware)
 
-    esphome run v10.yml
+Home Assistant (for integration)
 
-    This process builds the binary (UF2 or BIN file, depending on your chosen update method).
+Installation Guide
 
-    Flash the ESPHome Firmware:
-    There are two main methods:
-        OTA Update: If your device (now running kickstart firmware) supports OTA, upload the new binary through its web interface (accessed via the device’s temporary IP, e.g. http://192.168.4.1).
-        Direct Flashing: Alternatively, use your preferred method (USB-to-UART or the LT Chip Tool) to flash the binary.
+Step 1: Unlock Device & Install Kickstart Firmware
 
-    Verify Successful Flash:
-    Once updated, the device should connect to your home network. You can verify by checking your router’s DHCP leases or by using the ESPHome dashboard.
+Run Tuya CloudCutter on your Linux machine or Raspberry Pi.
 
-Step 3: Configuring Home Assistant for IR Control
+When prompted, select:
 
-After the v10.yml firmware is installed, the device automatically creates a sensor and button for each IR remote detected by the receiver. To control IR transmissions via Home Assistant, you can add a UI card. For example, here’s a YAML snippet for a vertical-stack card:
+Option 2: Flash third-party firmware.
+
+Option 2: Select by firmware device and name.
+
+Firmware version: 2.0.0 - BK7231N / oem_bk7231n_irbox_mol_ty.
+
+After the kickstart firmware is installed, the device will create a temporary Wi-Fi access point. Connect to it to proceed.
+
+Step 2: Flash the ESPHome Firmware
+
+Option 1: ESPHome Firmware Builder
+
+In Home Assistant, create a new ESPHome device.
+
+Place the v10.yml file into the ESPHome device’s YAML configuration.
+
+Edit secrets.yaml with:
+
+mqtt_broker IP
+
+mqtt_username
+
+mqtt_password
+
+Compile and download the firmware:
+
+esphome run v10.yml
+
+Access the kickstart firmware’s web interface via its Wi-Fi network, and upload the compiled firmware (HEX file).
+
+Option 2: Flash with 3rd-Party Tools
+
+Use USB-to-UART or LT Chip Tool for flashing.
+
+Follow standard procedures for your preferred method.
+
+Step 3: Configure Home Assistant
+
+Once the ESPHome firmware is installed, the device will:
+
+Detect and log IR remotes via its receiver.
+
+Create MQTT sensors and buttons in Home Assistant.
+
+Example Home Assistant UI (Lovelace YAML)
 
 type: vertical-stack
-title: Big Candle Ir Remote
+title: Big Candle IR Remote
 cards:
   - type: button
-    name: big candle on
+    name: Big Candle ON
     icon: mdi:fire
-    show_name: true
-    show_icon: true
-    tap_action:
+    tap_action: {action: toggle}
   - type: button
-    name: big candle 6H
+    name: Big Candle 6H Timer
     icon: mdi:clock-outline
-    show_name: true
-    show_icon: true
-    tap_action:
+    tap_action: {action: toggle}
   - type: button
-    name: big candle off
+    name: Big Candle OFF
     icon: mdi:fire-off
-    show_name: true
-    show_icon: true
-    tap_action:
+    tap_action: {action: toggle}
 
-https://pictogrammers.com/library/mdi/
-a library for icons for UI cards
+Additional Resources:
 
-Be sure to edit the name in substitutions:, globals:, esphome:, the name must be unique for each ir remote, also be sure to set mqtt_username, mqtt_password, and mqtt_broker ip address in your secrets.yaml 
+Icon Library for UI Cards: MDI Icons
+
+Notes & Tips
+
+Each IR remote must have a unique name (substitutions, globals, esphome fields in v10.yml).
+
+Ensure correct MQTT credentials are set in secrets.yaml.
+
+The kickstart firmware will NOT brick the device if the process fails—it can be retried.
+
+This guide ensures a smooth transition from a Tuya-locked IR device to an open-source, MQTT-enabled smart home solution!
+
+
