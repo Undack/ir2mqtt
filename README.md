@@ -41,6 +41,8 @@ This firmware is compatible with budget-friendly Tuya IR blasters like:
    2.0.0 - BK7231N / oem_bk7231n_irbox_mol_ty
    ```
 3. Once the **kickstart firmware** is installed, the device will create a **temporary Wi-Fi access point**.
+   
+- The **kickstart firmware** will NOT brick the device if the process fails—it can be retried.
 
 ## Step 2: Flash the ESPHome Firmware
 
@@ -91,12 +93,5 @@ cards:
 ## Additional Resources
 
 - **Icon Library for UI Cards:** [MDI Icons](https://pictogrammers.com/library/mdi/)
-
-## Notes & Tips
-
-- Ensure correct **MQTT credentials** are set in `secrets.yaml`.
-- The **kickstart firmware** will NOT brick the device if the process fails—it can be retried.
-
-This guide ensures a smooth transition from a Tuya-locked IR device to an open-source, MQTT-enabled smart home solution!
 
 
