@@ -21,7 +21,6 @@ This firmware is compatible with budget-friendly Tuya IR blasters like:
 
 - Tuya IR device with a **BK7231N chipset**
 - A **computer or Raspberry Pi** (to run Tuya CloudCutter)
-- A **USB-to-UART adapter** (if needed for kickstart flashing)
 
 ### Software:
 
