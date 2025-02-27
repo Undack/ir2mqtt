@@ -4,10 +4,9 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 
 ## Features
 
-- Manage all IR codes easily.
-- Receive and store IR codes automatically.
-- Copy MQTT topics for use in external applications.
-- Send IR codes directly to hardware.
+- Receive IR codes from remotes and publish them to mqtt
+- Receive IR codes from mqtt and transmit them via IR
+- Automatically add binary sensors for receiving and button for transmitting each detected code to home assistant
 
 ### Supported Devices
 
