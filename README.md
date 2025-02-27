@@ -56,10 +56,8 @@ This firmware is compatible with budget-friendly Tuya IR blasters like:
    mqtt_username: "your_username"
    mqtt_password: "your_password"
    ```
-5. Compile and download the firmware:
-   ```sh
-   esphome run v10.yml
-   ```
+5. Compile and download the firmware
+
 6. Access the **kickstart firmware’s web interface** and upload the compiled **HEX file**.
 
 ## Step 3: Configure Home Assistant
