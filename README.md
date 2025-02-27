@@ -13,7 +13,7 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 
 This firmware is compatible with budget-friendly Tuya IR blasters like:
 
-- [Device 1](https://www.aliexpress.com/item/1005007335703208.html)
+- [Device 1](https://www.aliexpress.com/item/1005008188667566.html)
 - [Device 2](https://www.aliexpress.com/item/1005008188667566.html)
 
 ## Prerequisites & Tools
