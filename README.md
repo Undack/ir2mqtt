@@ -41,7 +41,7 @@ This firmware is compatible with budget-friendly Tuya IR blasters like:
    2) Select by firmware device and name
    2.0.0 - BK7231N / oem_bk7231n_irbox_mol_ty
    ```
-3. Once the **kickstart firmware** is installed, the device will create a **temporary Wi-Fi access point**. Connect to it.
+3. Once the **kickstart firmware** is installed, the device will create a **temporary Wi-Fi access point**.
 
 ## Step 2: Flash the ESPHome Firmware
 
@@ -58,7 +58,7 @@ This firmware is compatible with budget-friendly Tuya IR blasters like:
    ```
 5. Compile and download the firmware
 
-6. Access the **kickstart firmware’s web interface** and upload the compiled **HEX file**.
+6. Access the **kickstart firmware’s wifi network** and **kickstart firmware’s web interface** and upload the compiled **HEX file**.
 
 ## Step 3: Configure Home Assistant
 
