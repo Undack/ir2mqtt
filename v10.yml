@@ -133,7 +133,6 @@ remote_receiver:
           payload: !lambda |-
             char str[11];
             snprintf(str, sizeof(str), "%lu", (unsigned long)x.data);
-            snprintf(str, sizeof str, "%lu", (unsigned long)x.data);
             // Define button variables
             std::string binary_sensor_config = std::string("{\"dev\": {")
                 + "\"ids\": \"" + id(name) + str + "\","
