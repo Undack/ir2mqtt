@@ -2,7 +2,7 @@
 
 IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enabling direct **IR input and output** communication with **Home Assistant** via **MQTT**. This allows control of IR appliances which many projects can do, but also enables existing IR remotes to interact with smart home devices—functionality most IR hubs lack, Finally, the project will automatically enroll codes into home assistant, making deployment easy.
 
-<img src="images/WhatsApp Image 2025-02-28 at 11.40.20.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23(1).jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/>
+<img src="images/WhatsApp Image 2025-02-28 at 11.40.20.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="200"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23(1).jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="200"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="200"/>
 
 *Figure 1: Remotes, various, previously e-waste can now be used as cheap wireless controllers*
 
