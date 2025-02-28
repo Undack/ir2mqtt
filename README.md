@@ -2,6 +2,11 @@
 
 IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enabling direct **IR input and output** communication with **Home Assistant** via **MQTT**. This allows control of IR appliances which many projects can do, but also enables existing IR remotes to interact with smart home devices—functionality most IR hubs lack, Finally, the project will automatically enroll codes into home assistant, making deployment easy.
 
+<img src="images/WhatsApp Image 2025-02-28 at 11.40.20.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23(1).jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/>
+
+*Figure 1: Remotes, various, previously e-waste can now be used as cheap wireless controllers*
+
+
 ## Features
 
 - Receive IR codes from remotes and publish them to mqtt
@@ -13,7 +18,7 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 This firmware is compatible with cheap Tuya wifi IR blasters, it has been tested on the following model specifically but would likely work with similar esphome flashable devices with minimal reconfiguration
 
 <img src="images/WhatsApp Image 2025-02-28 at 11.40.24.jpeg" alt="The Tuya wifi IR blaster." width="600"/>
-*Figure 1: The Tuya wifi IR blaster.*
+*Figure 2: The Tuya wifi IR blaster.*
 
 
 Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
@@ -73,7 +78,7 @@ Once the ESPHome firmware is installed, the device will:
 - Automatically create binary sensors and buttons to receive and send codes from any detected IR remote in home assistant, these can be found via the logbook, when the code is detected, or in the entities tab when filtering for the name of the device as provided in the yaml.
 
 <img src="images/Screenshot 2025-02-28 113720.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
-*Figure 2: Automatically created binary sensor and button for detected code, with a renamed pair above.*
+*Figure 3: Automatically created binary sensor and button for detected code, with a renamed pair above.*
 
 ### Example Home Assistant UI (Lovelace YAML)
 
@@ -94,10 +99,6 @@ cards:
     icon: mdi:fire-off
     tap_action: {action: toggle}
 ```
-<img src="images/WhatsApp Image 2025-02-28 at 11.40.20.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23(1).jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/><img src="images/WhatsApp Image 2025-02-28 at 11.40.23.jpeg" alt="Remotes, various, previously e-waste can now be used as cheap wireless controllers" width="300"/>
-
-*Figure 3: Remotes, various, previously e-waste can now be used as cheap wireless controllers*
-
 
 ## Additional Resources
 
