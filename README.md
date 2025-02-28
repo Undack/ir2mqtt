@@ -114,7 +114,7 @@ cards:
         entity_id: your_entity_id
 ```
 
-<img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="600"/>
+<img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="200"/>
 *Figure 4: In the lovelace UI*
 
 ## Additional Resources
