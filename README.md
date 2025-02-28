@@ -123,6 +123,7 @@ cards:
 - Included is the file remote_label_v9, for the custom remote in figure 1, this is for printig on a 62mm sticker printer, and should have the dotted corners rounded before being attached to the following remote [Remote](https://www.aliexpress.com/item/1005005923594477.html) or similar
 - https://esphome.io/components/libretiny.html
 - https://github.com/tuya-cloudcutter/tuya-cloudcutter
+- The gateway works best when laying flat pointed toward the ceiling, so that the IR light can bounce back down evenly 
 
 ## Potential future work (No promises)
 
