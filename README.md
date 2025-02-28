@@ -102,9 +102,10 @@ cards:
 
 ## Additional Resources
 
-- Icon Library for UI Cards: [MDI Icons](https://pictogrammers.com/library/mdi/)
+- Icon Library for UI Cards and IR remote icons: [MDI Icons](https://pictogrammers.com/library/mdi/)
 
 ## Potential future work (No promises)
 
 - IRdb integration to automtically group codes within a device, create UI cards automatically, etc...: [IRdb](https://github.com/probonopd/irdb)
+- Included is the file remote_label_v9, for the custom remote in figure 1, this is for printig on a 62mm sticker printer, and should have the dotted corners rounded before being attached to the following remote [Remote](https://www.aliexpress.com/item/1005005923594477.html)
 
