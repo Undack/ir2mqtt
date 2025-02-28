@@ -13,7 +13,6 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 This firmware is compatible with cheap Tuya wifi IR blasters, it has been tested on the following model specifically but would likely work with similar esphome flashable devices with minimal reconfiguration
 
 <img src="images/WhatsApp Image 2025-02-28 at 11.40.24.jpeg" alt="The Tuya wifi IR blaster." width="600"/>
-
 *Figure 1: The Tuya wifi IR blaster.*
 
 Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
@@ -71,6 +70,9 @@ Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
 Once the ESPHome firmware is installed, the device will:
 
 - Automatically create binary sensors and buttons to receive and send codes from any detected IR remote in home assistant, these can be found via the event log, when the code is detected, or in the entities tab, under the parent device.
+
+<img src="images/Screenshot 2025-02-28 113720.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
+*Figure 1: Automatically created binary sensor and button for detected code, with a renamed pair above.*
 
 ### Example Home Assistant UI (Lovelace YAML)
 
