@@ -102,9 +102,9 @@ cards:
 
 ## Additional Resources
 
-- **Icon Library for UI Cards:** [MDI Icons](https://pictogrammers.com/library/mdi/)
+- Icon Library for UI Cards: [MDI Icons](https://pictogrammers.com/library/mdi/)
 
 ## Potential future work (No promises)
 
-- **IRdb integration to automtically group codes within a device, create UI cards automatically, etc...:** [IRdb](https://github.com/probonopd/irdb)
+- IRdb integration to automtically group codes within a device, create UI cards automatically, etc...: [IRdb](https://github.com/probonopd/irdb)
 
