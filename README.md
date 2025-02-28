@@ -124,5 +124,5 @@ cards:
 
 ## Potential future work (No promises)
 
-- IRdb integration to automtically group codes within a device, create UI cards automatically, etc...: [IRdb](https://github.com/probonopd/irdb)
+- IRdb integration to automtically group codes within a device, create UI cards automatically, suggest related codes etc...: [IRdb](https://github.com/probonopd/irdb)
 
