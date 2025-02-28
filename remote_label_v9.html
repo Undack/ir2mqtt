@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectangle with Inner Square Grid</title>
+  <style>
+    .container {
+      position: relative;
+      width: 49mm;
+      height: 82mm;
+    }
+    .background-rectangle {
+      width: 49mm;
+      height: 82mm;
+      border: 2px dotted black;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .foreground-rectangle {
+      width: 49mm;
+      height: 82mm;
+      background-color: lightgrey;
+      border: 2px solid black;
+      border-radius: 4mm;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .inner-square {
+	  display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8mm;
+      height: 8mm;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 1mm;
+      position: absolute;
+      top: 16mm;
+      left: 8mm;
+      transform: translate(-50%, -50%);
+    }
+    /* Grid layout for inner squares */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 8mm); /* 4 squares wide, 8mm each */
+      grid-template-rows: repeat(6, 8mm); /* 6 squares down, 8mm each */
+      gap: 2.5mm; /* Center gap between squares */
+      position: absolute;
+      top: -4.25mm;
+      left: -4.25mm;
+    }
+    .grid .inner-square {
+      position: relative;
+      transform: none; /* Remove centering for grid squares */
+    }
+	.inner-square img {
+      width: 8mm;
+      height: 8mm;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background-rectangle"></div>
+    <div class="foreground-rectangle">
+      <div class="grid">
+        <!-- Additional squares for the grid -->
+        <div class="inner-square"><iconify-icon icon="mdi:rewind"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:play-pause"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:fast-forward"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:volume-plus"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:one-up"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:bomb"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:volume-variant-off"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:volume-minus"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:numeric-1"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:numeric-2"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:numeric-3"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:numeric-4"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:fan-chevron-up"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:network-strength-4"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:lightbulb-on-50"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:lightbulb-on-50"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:fan-chevron-down"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:network-strength-2"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:lightbulb-off"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:lightbulb-off"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:fan-off"></iconify-icon></div>
+        <div class="inner-square"><iconify-icon icon="mdi:network-strength-outline"></iconify-icon></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
