@@ -89,15 +89,27 @@ cards:
   - type: button
     name: Big Candle ON
     icon: mdi:fire
-    tap_action: {action: toggle}
+    tap_action:
+      action: call-service
+      service: button.press
+      target:
+        entity_id: button.big_candle_on
   - type: button
     name: Big Candle 6H Timer
     icon: mdi:clock-outline
-    tap_action: {action: toggle}
+    tap_action:
+      action: call-service
+      service: button.press
+      target:
+        entity_id: button.big_candle_6h_timer
   - type: button
     name: Big Candle OFF
     icon: mdi:fire-off
-    tap_action: {action: toggle}
+    tap_action:
+      action: call-service
+      service: button.press
+      target:
+        entity_id: button.big_candle_off
 ```
 
 ## Additional Resources
