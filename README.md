@@ -80,6 +80,8 @@ Once the ESPHome firmware is installed, the device will:
 <img src="images/Screenshot 2025-02-28 113720.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
 *Figure 3: Automatically created binary sensor and button for detected code, with a renamed pair above.*
 
+
+
 ### Example Home Assistant UI (Lovelace YAML)
 
 ```yaml
@@ -93,7 +95,7 @@ cards:
       action: call-service
       service: button.press
       target:
-        entity_id: button.big_candle_on
+        entity_id: your_entity_id
   - type: button
     name: Big Candle 6H Timer
     icon: mdi:clock-outline
@@ -101,7 +103,7 @@ cards:
       action: call-service
       service: button.press
       target:
-        entity_id: button.big_candle_6h_timer
+        entity_id: your_entity_id
   - type: button
     name: Big Candle OFF
     icon: mdi:fire-off
@@ -109,8 +111,11 @@ cards:
       action: call-service
       service: button.press
       target:
-        entity_id: button.big_candle_off
+        entity_id: your_entity_id
 ```
+
+<img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="600"/>
+*Figure 4: In the lovelace UI*
 
 ## Additional Resources
 
