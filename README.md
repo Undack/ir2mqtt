@@ -15,6 +15,7 @@ This firmware is compatible with cheap Tuya wifi IR blasters, it has been tested
 <img src="images/WhatsApp Image 2025-02-28 at 11.40.24.jpeg" alt="The Tuya wifi IR blaster." width="600"/>
 *Figure 1: The Tuya wifi IR blaster.*
 
+
 Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
 
 - [Device 1](https://www.aliexpress.com/item/1005008188667566.html)
