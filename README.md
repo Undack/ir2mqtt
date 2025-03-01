@@ -120,6 +120,38 @@ cards:
 <img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="200"/>
 *Figure 5: In the lovelace UI*
 
+### Example Home Assistant Automation
+
+```yaml
+alias: Example Automation
+trigger:
+  - platform: state
+    entity_id: binary_sensor.example_sensor
+    to: "on"
+  - platform: state
+    entity_id: binary_sensor.example_sensor
+    to: "off"
+action:
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: binary_sensor.example_sensor
+            state: "on"
+        sequence:
+          - service: light.turn_on
+            target:
+              entity_id: light.example_light
+      - conditions:
+          - condition: state
+            entity_id: binary_sensor.example_sensor
+            state: "off"
+        sequence:
+          - service: light.turn_off
+            target:
+              entity_id: light.example_light
+mode: single
+```
+
 ## Additional Resources
 
 - Icon Library for UI Cards and IR remote icons: [MDI Icons](https://pictogrammers.com/library/mdi/)
