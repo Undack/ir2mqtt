@@ -24,7 +24,7 @@ This firmware is compatible with cheap Tuya wifi IR blasters, it has been tested
 *Figure 3: The Tuya wifi IR blaster.*
 
 
-Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
+Commonly whitelabeled and resold, it can be found on aliexpress for around £5:
 
 - [Device 1](https://www.aliexpress.com/item/1005008188667566.html)
 - [Device 2](https://www.aliexpress.com/item/1005007588675238.html)
