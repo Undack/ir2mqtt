@@ -6,6 +6,9 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 
 *Figure 1: Remotes, various, previously e-waste can now be used as cheap wireless controllers*
 
+<img src="images/WhatsApp Image 2025-03-01 at 00.22.50.jpeg" alt="Various cheap led devices and most AV equipment can be controlled via IR remote" width="200"/><img src="images/WhatsApp Image 2025-03-01 at 00.22.50(1).jpeg" alt="Various cheap led devices and most AV equipment can be controlled via IR remote" width="200"/><img src="images/WhatsApp Image 2025-03-01 at 00.22.51.jpeg" alt="Various cheap led devices and most AV equipment can be controlled via IR remote" width="200"/>
+
+*Figure 2: Remotes, various, previously e-waste can now be used as cheap wireless controllers*
 
 ## Features
 
@@ -18,7 +21,7 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 This firmware is compatible with cheap Tuya wifi IR blasters, it has been tested on the following model specifically but would likely work with similar esphome flashable devices with minimal reconfiguration
 
 <img src="images/WhatsApp Image 2025-02-28 at 11.40.24.jpeg" alt="The Tuya wifi IR blaster." width="600"/>
-*Figure 2: The Tuya wifi IR blaster.*
+*Figure 3: The Tuya wifi IR blaster.*
 
 
 Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
@@ -78,7 +81,7 @@ Once the ESPHome firmware is installed, the device will:
 - Automatically create binary sensors and buttons to receive and send codes from any detected IR remote in home assistant, these can be found via the logbook, when the code is detected, or in the entities tab when filtering for the name of the device as provided in the yaml.
 
 <img src="images/Screenshot 2025-02-28 113720.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
-*Figure 3: Automatically created binary sensor and button for detected code, with a renamed pair above.*
+*Figure 4: Automatically created binary sensor and button for detected code, with a renamed pair above.*
 
 
 
@@ -115,7 +118,7 @@ cards:
 ```
 
 <img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="200"/>
-*Figure 4: In the lovelace UI*
+*Figure 5: In the lovelace UI*
 
 ## Additional Resources
 
