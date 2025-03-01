@@ -63,8 +63,8 @@ Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
 ### ESPHome Firmware Builder
 
 1. Create a **new ESPHome device** in Home Assistant.
-2. Place the `v10.yml` file in the ESPHome configuration.
-3. Each IR remote must have a unique name (substitutions, globals, esphome fields in v10.yml).
+2. Place the `v11.yml` file in the ESPHome configuration.
+3. Each IR remote must have a unique name (substitutions, globals, esphome fields in v11.yml).
 4. Edit `secrets.yaml`:
    ```yaml
    mqtt_broker: "your_broker_ip"
