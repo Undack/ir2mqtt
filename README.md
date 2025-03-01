@@ -39,8 +39,9 @@ Commonly whitelabeled and resold, it can be found on aliexpress for very cheap:
 ### Software:
 
 - [Tuya CloudCutter](https://digiblur.com/2023/08/19/updated-tuya-cloudcutter-with-esphome-bk7231-how-to-guide/) (for unlocking the device)
-- **ESPHome** (to compile and flash the firmware)
 - **Home Assistant** (for integration)
+- **HA ESPHome integration** (to compile and flash the firmware)
+- **HA MQTT integration** (for communications)
 
 ## Installation Guide
 
