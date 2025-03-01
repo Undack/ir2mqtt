@@ -8,7 +8,7 @@ IR2MQTT is a custom firmware for **generic BK7231N-QFN32 Tuya IR devices**, enab
 
 <img src="images/WhatsApp Image 2025-03-01 at 00.22.50.jpeg" alt="Various cheap led devices and most AV equipment can be controlled via IR remote" width="200"/><img src="images/WhatsApp Image 2025-03-01 at 00.22.50(1).jpeg" alt="Various cheap led devices and most AV equipment can be controlled via IR remote" width="200"/><img src="images/WhatsApp Image 2025-03-01 at 00.22.51.jpeg" alt="Various cheap led devices and most AV equipment can be controlled via IR remote" width="200"/>
 
-*Figure 2: Remotes, various, previously e-waste can now be used as cheap wireless controllers*
+*Figure 2: Various cheap led devices and most AV equipment can be controlled via IR remote*
 
 ## Features
 
