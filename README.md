@@ -118,6 +118,8 @@ cards:
         entity_id: your_entity_id
 ```
 
+placing these elements within a horizontal stack can be used to recreate broader remotes as make better use of available ui space.
+
 <img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="200"/>
 *Figure 5: In the lovelace UI*
 
