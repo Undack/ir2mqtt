@@ -79,7 +79,7 @@ Commonly whitelabeled and resold, it can be found on aliexpress for around £5:
 
 Once the ESPHome firmware is installed, the device will:
 
-- Automatically create binary sensors and buttons to receive and send codes from any detected IR remote in home assistant, these can be found via the logbook, when the code is detected, or in the entities tab when filtering for the name of the device as provided in the yaml. It can be helpful to rename the entities at this stage, be sure to rename both the button and the sensor to avoid confusion later, it can be helpful to make a note of the code before changing either, though the entity id can still identify the code if needed.
+- Automatically create binary sensors and buttons to receive and send codes from any detected IR remote in home assistant, these can be found via the logbook, when the code is detected, or in the entities tab when filtering for the name of the device as provided in the yaml. It can be helpful to rename the entities at this stage, be sure to rename both the button and the sensor to avoid confusion later.
 
 <img src="images/Screenshot 2025-02-28 113720.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
 *Figure 4: Automatically created binary sensor and button for detected code, with a renamed pair above.*
