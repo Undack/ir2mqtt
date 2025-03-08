@@ -71,9 +71,9 @@ Commonly whitelabeled and resold, it can be found on aliexpress for around £5:
    mqtt_username: "your_username"
    mqtt_password: "your_password"
    ```
-5. Compile and download the firmware
+5. Compile and download the firmware by selecting manual download and then uf2 (reccommended)
 
-6. Access the **kickstart firmware’s wifi network** and **kickstart firmware’s web interface** and upload the compiled **HEX file**.
+6. Access the **kickstart firmware’s wifi network** and **kickstart firmware’s web interface** and upload the compiled **UF2 file**.
 
 ## Step 3: Configure Home Assistant
 
