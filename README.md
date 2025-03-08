@@ -79,7 +79,9 @@ Commonly whitelabeled and resold, it can be found on aliexpress for around £5:
 
 Once the ESPHome firmware is installed, the device will:
 
-- Automatically create a new device with the name as entered in the yaml in the mqtt integration, and will automatically populate with new codes as button and binary sensor entities as they are detected. It can be helpful to rename the entities at this stage, be sure to rename both the button and the sensor to avoid confusion later.
+Automatically create a new device with the name as entered in the yaml in the mqtt integration, and will automatically populate with new codes as button and binary sensor entities as they are detected. It can be helpful to rename the entities at this stage, be sure to rename both the button and the sensor to avoid confusion later.
+
+Simply point a remote at the device in order to save it or the devices it controls for automation, if no remote is available for a device it can be possible to find a suitable controller with one of the many ir universal remote apps available 
 
 <img src="images/Screenshot 2025-03-08 174647.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
 *Figure 4: Automatically created binary sensor and button for detected code, with a renamed pair above.*
