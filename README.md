@@ -63,8 +63,8 @@ Commonly whitelabeled and resold, it can be found on aliexpress for around £5:
 ### ESPHome Firmware Builder
 
 1. Create a **new ESPHome device** in Home Assistant.
-2. Place the `v11.yml` file in the ESPHome configuration.
-3. Each IR remote must have a unique name (substitutions, globals, esphome fields in v11.yml).
+2. Copy the contents of the `v12.yml` file to the ESPHome configuration.
+3. Each IR remote must have a unique name (substitutions, globals, esphome fields in v12.yml).
 4. Edit `secrets.yaml`:
    ```yaml
    mqtt_broker: "your_broker_ip"
@@ -79,9 +79,9 @@ Commonly whitelabeled and resold, it can be found on aliexpress for around £5:
 
 Once the ESPHome firmware is installed, the device will:
 
-- Automatically create a new device in the mqtt integration, and will automatically populate with new codes as button and binary sensor entities as they are detected. It can be helpful to rename the entities at this stage, be sure to rename both the button and the sensor to avoid confusion later.
+- Automatically create a new device with the name as entered in the yaml in the mqtt integration, and will automatically populate with new codes as button and binary sensor entities as they are detected. It can be helpful to rename the entities at this stage, be sure to rename both the button and the sensor to avoid confusion later.
 
-<img src="images/Screenshot 2025-02-28 113720.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
+<img src="images/Screenshot 2025-03-08 174647.png" alt="Automatically created binary sensor and button for detected code, with a renamed pair above" width="600"/>
 *Figure 4: Automatically created binary sensor and button for detected code, with a renamed pair above.*
 
 
@@ -118,7 +118,7 @@ cards:
         entity_id: your_entity_id
 ```
 
-placing these elements within a horizontal stack can be used to recreate broader remotes as make better use of available ui space.
+placing these elements within a horizontal stack can be used to recreate broader remotes with smaller buttons to make better use of available ui space.
 
 <img src="images/Screenshot 2025-02-28 130632.png" alt="In the lovelace UI" width="200"/>
 *Figure 5: In the lovelace UI*
