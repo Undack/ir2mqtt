@@ -127,7 +127,7 @@ remote_receiver:
                 + "\"unique_id\": \"" + str + " Send\","
                 + "\"command_topic\": \"" + id(name) + "/ir/lg_send\","
                 + "\"payload_press\": \"" + str + "\","
-                + "\"retain\": \"false\"}";
+                + "\"retain\": \"true\"}";
             return button_config;
 
       - mqtt.publish:
@@ -157,9 +157,10 @@ remote_receiver:
                 + "\"state_topic\": \"" + id(name) + "/ir/lg_receive\","
                 + "\"payload_on\": \"" + std::string(str) + "\","
                 + "\"off_delay\": \"1\","
-                + "\"retain\": \"false\"}";
+                + "\"retain\": \"true\"}";
             return binary_sensor_config;
 
 # https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery
 # https://community.home-assistant.io/t/remote-receiver-to-mqtt/324559
+
 # https://cboard.cprogramming.com/c-programming/104485-how-convert-uint32_t-string.html
