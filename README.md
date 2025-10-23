@@ -167,11 +167,15 @@ Some batches of this module use different pins for RX (receive) and TX (transmit
 2. Compile and write the firmware to the device, either wirelessly, or manually via the device's local page.
 3. Open the device’s local web page — either via its IP/hostname (reccommended, check your router dhcp allocation if you cannot find) or Home Assistant’s esphome device list.
 4. Point any IR remote at the device and press a button.
+
 <img src="images/Untitled.jpg" alt="Point any IR remote at the device and press a button" width="600"/>
 *Figure 6: Triggering the receiver*
+
 5. On the web interface, on the left side table You’ll see the pin changing state, and on the right you'll see the same reported to the console.
+
 <img src="images/Screenshot 2025-10-23 095155.png" alt="Detecting in the UI" width="600"/>
 *Figure 7: Detecting in the UI*
+
 6. Note the pin name (e.g. P7, P6, P26).
 7. Copy that pin into the remote_receiver section of your main v12.yaml, under the field named number (make sure it is within the quotes, like "P9").
 8. Reflash the v12.yml script with the rx (and/or tx pins changed), the device should automatically report codes to homeassistant, and you should see code publishing reported in the console on the device's local page.
@@ -181,12 +185,16 @@ Some batches of this module use different pins for RX (receive) and TX (transmit
 1. Copy the contents of the tx_finder.yml` file to the ESPHome configuration (steps 1, 2, and 3 here are identical to rx_finder).
 2. Compile and write the firmware to the device, either wirelessly, or manually via the device's local page.
 3. Open the device’s local web page — either via its IP/hostname or Home Assistant’s esphome device list.
+
 <img src="images/Screenshot 2025-10-23 102834.png" alt="The TX finder UI" width="600"/>
 *Figure 8: The TX finder UI*
+
 4. Grab a phone camera or similar (IR LEDs are invisible to the naked eye).
 5. Press each button on the web page (or in Home Assistant) one by one, Watch through your camera — when you see the LEDs come on, you’ve found your TX pin.
+
 <img src="images/Blinky.jpg" alt="The IR blaster with LEDs lit" width="600"/>
 *Figure 9: The Device usually has 4 high brightness IR LEDs under the cover*
+
 6. Note the pin name (e.g. P7, P6, P26).
 7. Copy that pin into the remote_transmitter section of your main v12.yaml, under the field named pin (no quotes are needed here).
 8. Reflash the v12.yml script with the tx (and/or rx pins changed), the device should transmit any codes sent from homeassistant, and you should see code reception and transmission reported in the console on the device's local page.
