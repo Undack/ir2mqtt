@@ -203,7 +203,8 @@ On the generic-bk7231n-qfn32-tuya board you have these usable GPIOs to cycle thr
 ```
 P0, P1, P6, P7, P8, P9, P10, P11, P14, P15, P16, P17, P20, P21, P22, P23, P24, P26, P28
 ```
-[libretiny wiki](https://docs.libretiny.eu/boards/generic-bk7231n-qfn32-tuya/#usage)
+pins available per the [libretiny wiki](https://docs.libretiny.eu/boards/generic-bk7231n-qfn32-tuya/#usage)
+
 If that still fails — it’s probably an incompatible module. Consider it unsupported (for now).
 
 ## Additional Resources
