@@ -180,7 +180,7 @@ Some batches of this module use different pins for RX (receive) and TX (transmit
 
 ### TX Finder
 
-1. Copy the contents of the tx_finder.yml` file to the ESPHome configuration (steps 1, 2, and 3 here are identical to rx_finder).
+1. Copy the contents of the `tx_finder.yml` file to the ESPHome configuration (steps 1, 2, and 3 here are identical to rx_finder).
 2. Compile and write the firmware to the device, either wirelessly, or manually via the device's local page.
 3. Open the device’s local web page — either via its IP/hostname or Home Assistant’s esphome device list.
 
