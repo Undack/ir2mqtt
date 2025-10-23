@@ -157,6 +157,51 @@ action:
 mode: single
 ```
 
+## Finding RX and TX pins on devices
+
+Some batches of this module use different pins for RX (receive) and TX (transmit). To find which pins your device actually uses, we provide two helper scripts: rx_finder and tx_finder.
+
+### RX Finder
+
+1. Copy the contents of the `rx_finder.yml` file to the ESPHome configuration (remember to ensure that each IR remote has a unique name as in step 2 of initial flashing, no changes to secrets.yaml are required for finding pins).
+2. Compile and write the firmware to the device, either wirelessly, or manually via the device's local page.
+3. Open the device’s local web page — either via its IP/hostname (reccommended, check your router dhcp allocation if you cannot find) or Home Assistant’s esphome device list.
+4. Point any IR remote at the device and press a button.
+<img src="images/Untitled.jpg" alt="Point any IR remote at the device and press a button" width="600"/>
+*Figure 6: Triggering the receiver*
+5. On the web interface, on the left side table You’ll see the pin changing state, and on the right you'll see the same reported to the console.
+<img src="images/Screenshot 2025-10-23 095155.png" alt="Detecting in the UI" width="600"/>
+*Figure 7: Detecting in the UI*
+6. Note the pin name (e.g. P7, P6, P26).
+7. Copy that pin into the remote_receiver section of your main v12.yaml, under the field named number (make sure it is within the quotes, like "P9").
+8. Reflash the v12.yml script with the rx (and/or tx pins changed), the device should automatically report codes to homeassistant, and you should see code publishing reported in the console on the device's local page.
+
+### TX Finder
+
+1. Copy the contents of the tx_finder.yml` file to the ESPHome configuration (steps 1, 2, and 3 here are identical to rx_finder).
+2. Compile and write the firmware to the device, either wirelessly, or manually via the device's local page.
+3. Open the device’s local web page — either via its IP/hostname or Home Assistant’s esphome device list.
+<img src="images/Screenshot 2025-10-23 102834.png" alt="The TX finder UI" width="600"/>
+*Figure 8: The TX finder UI*
+4. Grab a phone camera or similar (IR LEDs are invisible to the naked eye).
+5. Press each button on the web page (or in Home Assistant) one by one, Watch through your camera — when you see the LEDs come on, you’ve found your TX pin.
+<img src="images/Blinky.jpg" alt="The IR blaster with LEDs lit" width="600"/>
+*Figure 9: The Device usually has 4 high brightness IR LEDs under the cover*
+6. Note the pin name (e.g. P7, P6, P26).
+7. Copy that pin into the remote_transmitter section of your main v12.yaml, under the field named pin (no quotes are needed here).
+8. Reflash the v12.yml script with the tx (and/or rx pins changed), the device should transmit any codes sent from homeassistant, and you should see code reception and transmission reported in the console on the device's local page.
+
+### If Nothing Works
+
+If neither script detects any pins, your hardware revision may use nonstandard pins not listed in the finder scripts.
+You can manually edit the pin lists in rx_finder and tx_finder to test the remaining available GPIOs.
+On the generic-bk7231n-qfn32-tuya board you have these usable GPIOs to cycle through:
+```
+P0, P1, P6, P7, P8, P9, P10, P11, P14, P15, P16, P17, P20, P21, P22, P23, P24, P26, P28
+```
+[libretiny wiki](https://docs.libretiny.eu/boards/generic-bk7231n-qfn32-tuya/#usage)
+If that still fails — it’s probably an incompatible module. Consider it unsupported (for now).
+
 ## Additional Resources
 
 - Icon Library for UI Cards and IR remote icons: [MDI Icons](https://pictogrammers.com/library/mdi/)
