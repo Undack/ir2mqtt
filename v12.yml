@@ -129,6 +129,7 @@ remote_receiver:
                 + "\"payload_press\": \"" + str + "\","
                 + "\"retain\": \"true\"}";
             return button_config;
+          retain: true
 
       - mqtt.publish:
           topic: !lambda |-
@@ -159,8 +160,10 @@ remote_receiver:
                 + "\"off_delay\": \"1\","
                 + "\"retain\": \"true\"}";
             return binary_sensor_config;
+          retain: true
 
 # https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery
 # https://community.home-assistant.io/t/remote-receiver-to-mqtt/324559
 
 # https://cboard.cprogramming.com/c-programming/104485-how-convert-uint32_t-string.html
+
